@@ -1,0 +1,14 @@
+<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip8_704">
+			<rect id="Outline / Time Outline" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Outline / Time Outline" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip8_704)">
+		<path id="Union" d="M10 2.5C5.85 2.5 2.5 5.85 2.5 10C2.5 14.14 5.85 17.5 10 17.5C14.14 17.5 17.5 14.14 17.5 10C17.5 5.85 14.14 2.5 10 2.5ZM3.58 10C3.58 6.45 6.45 3.58 10 3.58C13.54 3.58 16.41 6.45 16.41 10C16.41 13.54 13.54 16.41 10 16.41C6.45 16.41 3.58 13.54 3.58 10ZM10 6.25C10.29 6.25 10.54 6.49 10.54 6.79L10.54 10L13.33 10C13.63 10 13.87 10.24 13.87 10.54C13.87 10.84 13.63 11.08 13.33 11.08L10 11.08C9.7 11.08 9.45 10.84 9.45 10.54L9.45 6.79C9.45 6.49 9.7 6.25 10 6.25Z" fill="#505050" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

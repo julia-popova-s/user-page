@@ -5,13 +5,18 @@ import { mount } from './core/mount';
 import { unmount } from './core/unmount';
 import { reactive, watchEffect } from './core/reactive';
 import { renderActivity } from './components/pages/activity';
+import { renderHeader } from './components/elements/header';
 
-let currentNode = renderResume();
+let currentNode = renderMap();
 
-mount(currentNode, document.getElementById('app'));
+const header = renderHeader();
+mount(header, document.getElementById('header'));
+
+mount(currentNode, document.getElementById('main'));
 
 const state = reactive({
-  time: '0 : 0'
+  time: '0 : 0',
+  map: null
 });
 
 function getTime() {
@@ -47,8 +52,15 @@ watchEffect(() => {
   if (idPage === 'time') {
     unmount(currentNode);
     currentNode = renderTime(state.time);
-    mount(currentNode, document.getElementById('app'));
+    mount(currentNode, document.getElementById('main'));
   }
+});
+
+watchEffect(() => {
+  unmount(currentNode);
+  currentNode = renderMap(state.map);
+  console.log(currentNode);
+  mount(currentNode, document.getElementById('main'));
 });
 
 window.addEventListener('beforeunload ', function () {
@@ -58,7 +70,7 @@ window.addEventListener('beforeunload ', function () {
 
 const render = (render) => {
   const newNode = render();
-  mount(newNode, document.getElementById('app'));
+  mount(newNode, document.getElementById('main'));
   currentNode = newNode;
 };
 
@@ -70,7 +82,7 @@ const hashChange = (e) => {
     if (idPage === 'resume') {
       render(renderResume);
     } else if (idPage === 'map') {
-      render(renderMap);
+      render(() => renderMap(state.map));
     } else if (idPage === 'time') {
       render(() => renderTime(state.time));
     } else if (idPage === 'activity') {
