@@ -6,6 +6,15 @@ export function renderTime(time) {
     {
       class: 'container'
     },
-    [h('h1', {}, 'Timer'), h('div', { class: 'nav-link' }, time.toString())]
+    [
+      h('h1', {}, 'Timer'),
+      h(
+        'div',
+        {
+          class: 'nav-link'
+        },
+        time.toString()
+      )
+    ]
   );
 }

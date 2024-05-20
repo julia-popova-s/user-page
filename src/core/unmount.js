@@ -1,3 +1,3 @@
 export function unmount(vnode) {
-  vnode.$el?.parentNode?.removeChild(vnode.$el);
+  if (vnode.$el) vnode.$el?.parentNode?.removeChild(vnode.$el);
 }
